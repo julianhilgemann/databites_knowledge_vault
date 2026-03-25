@@ -166,6 +166,6 @@ CALCULATE(
 
 ### Mnemonic: **"Standard, Custom, Group"**
 
-1.  **Standard:** Use native DAX functions first.
+1.  **Standard:** Use native [[DAX]] functions first.
 2.  **Custom:** If Fiscal/Retail, use Filter logic (Offsets).
-3.  **Group:** Use Calculation Groups to scale it.
+3.  **Group:** Use [[Calculation Groups]] to scale it.

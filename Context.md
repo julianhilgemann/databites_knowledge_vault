@@ -90,7 +90,7 @@ Usually end in **X**. (`SUMX`, `AVERAGEX`, `MINX`, `MAXX`, `CONCATENATEX`).
 #### 1. The "Maximum Value" Logic
 
 **Question:** "How do I calculate the total sales of the *last date* in the current selection?"
-**Solution:** You need an iterator and context transition.
+**Solution:** You need an iterator and [[Context Transition|context transition]].
 ```dax
 Sales Last Date = 
 VAR MaxDate = MAX(Sales[Date]) -- 1. Find the date in the current Filter Context
@@ -113,7 +113,7 @@ RETURN
     *   Used when logic is complex (e.g., `Price > Cost * 1.5`).
     *   *Key Distinction:* `FILTER` respects existing context unless you tell it not to (using `ALL`).
 
-#### 3. Measure vs. Calculated Column
+#### 3. Measure vs. [[Calculated Column]]
 **Question:** "When should you use a Calculated Column vs. a Measure?"
 **Answer:**
 *   **Measure:** Always preferred. Calculated at query time (CPU). Dynamic based on user slicers.

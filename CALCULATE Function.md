@@ -11,7 +11,7 @@ This is the **Heart of [[DAX]]**. If you master this, you master the language.
 When the engine sees `CALCULATE( [Sales], Filter1, Filter2 )`, it follows this strict 4-step process. **Memorize this.**
 
 1.  **Snapshot:** It takes a snapshot of the *existing* Filter [[Context]] (from slicers/visuals).
-2.  **Transition:** If a **Row Context** exists (e.g., inside `SUMX` or a [[Calculated Column]]), it creates a new Filter Context from the current row ([[Context Transition]]).
+2.  **Transition:** If a **Row [[Context]]** exists (e.g., inside `SUMX` or a [[Calculated Column]]), it creates a new Filter Context from the current row ([[Context Transition]]).
 3.  **Modification:** It evaluates the Modifier functions (`ALL`, `REMOVEFILTERS`, `KEEPFILTERS`, `USERELATIONSHIP`).
     *   *Crucial:* These remove or alter filters *before* new ones are added.
 4.  **Overwrite/Merge:** It evaluates the explicit filters (`Color = "Red"`).
@@ -24,7 +24,7 @@ When the engine sees `CALCULATE( [Sales], Filter1, Filter2 )`, it follows this s
 # Part 2: [[Context Transition]] (The Magic)
 
 ### What is it?
-**Context Transition** is the process where the engine takes the **current row** (Row Context) and transforms every value in that row into a **Filter Context**.
+**[[Context Transition]]** is the process where the engine takes the **current row** (Row Context) and transforms every value in that row into a **Filter Context**.
 
 ### The "Hidden" Rule
 Anytime you call a **Measure** inside [[DAX]], it is automatically wrapped in a hidden `CALCULATE()`.
@@ -44,7 +44,7 @@ Formula: `Col = SUM(Sales[Amount])`
 *   **Action:** `SUM` ignores Row Context. It only sees Filter Context. Since there are no slicers, it sees the whole table.
 *   **Result:** **Grand Total** (e.g., $1,000) on every row.
 
-**Scenario B: Calculated Column WITH Transition**
+**Scenario B: [[Calculated Column]] WITH Transition**
 
 Formula: `Col = CALCULATE( SUM(Sales[Amount]) )`
 *   **Context:** Row Context (I am on Row 1: ID=1, Color=Red, Price=10).
@@ -56,7 +56,7 @@ Formula: `Col = CALCULATE( SUM(Sales[Amount]) )`
 
 # Part 3: The "Iterator" Trap (Best Practice)
 
-This is the most common test of Senior DAX knowledge.
+This is the most common test of Senior [[DAX]] knowledge.
 
 **The Question:**
 "I have a measure `[Total Sales]`. I want to calculate the sum of sales for products that sold more than $100."

@@ -47,7 +47,7 @@ Age Bin = FLOOR( Customer[Age], 10 )
 
 ### 3. Booleans (True/False vs. Yes/No)
 
-**Context:** Creating flags like `IsLate`, `HasDiscount`.
+**[[Context]]:** Creating flags like `IsLate`, `HasDiscount`.
 **The Trap:** Returning Text `"Yes"` or `"No"`.
 **The Best Practice:** Return standard `TRUE` / `FALSE` or `1` / `0`.
 
@@ -128,7 +128,7 @@ RETURN
 ```dax
 Days To Ship = DATEDIFF( Sales[OrderDate], Sales[ShipDate], DAY )
 ```
-*   **Tip:** "I use `DATEDIFF` with the `SECOND` or `MINUTE` granularity carefully, as it produces high cardinality integers (millions of unique values), which hurts model size."
+*   **Tip:** "I use `DATEDIFF` with the `SECOND` or `MINUTE` granularity carefully, as it produces high [[Cardinality|cardinality]] integers (millions of unique values), which hurts model size."
 
 ---
 
@@ -140,7 +140,7 @@ Days To Ship = DATEDIFF( Sales[OrderDate], Sales[ShipDate], DAY )
 | **Flags** | Text "Yes"/"No" | Boolean `TRUE`/`FALSE` | RAM storage & filter speed. |
 | **Binning** | GUI Groups | `FLOOR()` or `ROUNDDOWN()` | Explicit control & integer storage. |
 | **Sorting** | Manual ordering | Dedicated Integer Sort Column | Required for text like Jan/Feb or Low/High. |
-| **Creation** | DAX | Power Query (M) | Do heavy row-by-row transformations in ETL, not RAM. |
+| **Creation** | [[DAX]] | Power Query (M) | Do heavy row-by-row transformations in ETL, not RAM. |
 | **Logic** | `EARLIER()` | Variables (`VAR`) | `EARLIER` is legacy and confusing. VAR is standard. |
 
 ### Final Mnemonic

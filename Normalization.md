@@ -90,7 +90,7 @@ Stakeholder: *"Our source database is highly normalized. How do you handle that 
     *   I will use Power Query (or [[SQL]] Views) to join `City`, `State`, and `Country` into a single `Dim_Geography` table.
     *   I will join `Product`, `SubCat`, and `Cat` into a single `Dim_Product` table.
 3.  **"The Goal is a [[Star Schema]]."**
-    *   I want fewer [[Tables|tables]] with fewer hops ([[Relationships|relationships]]), even if that means the Dimension tables are "wide" and contain repeated text values.
+    *   I want fewer [[Tables|tables]] with fewer hops ([[Relationships|relationships]]), even if that means the Dimension [[Tables|tables]] are "wide" and contain repeated text values.
 
 ### 5. Quick Glossary
 

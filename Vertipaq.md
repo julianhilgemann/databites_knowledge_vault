@@ -33,20 +33,20 @@ VertiPaq doesn't just store columns; it aggressively compresses them using three
     *   *Action:* VertiPaq stores: `(Red, 4), (Blue, 2)`.
     *   *Impact:* **Sort Order Matters.** If your data is sorted well, RLE compresses millions of rows into bytes. This is why Star Schemas are faster than Flat [[Tables]]—dimension IDs repeat often (high RLE potential).
 
-### 3. VertiPaq vs. SQL (The Definitive Answer)
+### 3. VertiPaq vs. [[SQL]] (The Definitive Answer)
 | Feature | SQL (Row Store) | VertiPaq (Column Store) |
 | :--- | :--- | :--- |
 | **Primary Goal** | Transactional integrity (ACID), retrieving records. | Analytical speed (Aggregations, Filtering). |
 | **Storage** | Disk-based (usually). | **In-Memory** (RAM). |
 | **Reading** | Reads full rows (Pages). | Reads specific columns only. |
 | **Joins** | Joins happen at query time (expensive). | [[Relationships]] are pre-indexed pointers (fast). |
-| **Weakness** | Slow at scanning millions of rows for sums. | Slow at retrieving "Detail Rows" (SELECT *) and high cardinality. |
+| **Weakness** | Slow at scanning millions of rows for sums. | Slow at retrieving "Detail Rows" (SELECT *) and high [[Cardinality|cardinality]]. |
 
 ### 🛑 The "Need-to-Know" for Modeling
 1.  **Cardinality is King:** The number of *unique* values in a column determines the model size.
     *   *Rule:* Split `DateTime` into `Date` and `Time`. `DateTime` has unique values every second (High Cardinality). `Date` only has 365 values per year (Low Cardinality).
 2.  **Wide [[Tables]] are Fine (mostly):** Because it's a column store, having 100 columns doesn't hurt performance *unless* you use them all in a visual. Unused columns just take up RAM, not CPU time during queries.
-3.  **[[Star Schema]] Optimization:** VertiPaq is optimized to filter small tables (Dimensions) and propagate those filters to big tables (Facts) via [[Relationships|relationships]]. It hates filtering massive flat tables directly.
+3.  **[[Star Schema]] Optimization:** VertiPaq is optimized to filter small [[Tables|tables]] (Dimensions) and propagate those filters to big tables (Facts) via [[Relationships|relationships]]. It hates filtering massive flat tables directly.
 
 ---
 
@@ -56,7 +56,7 @@ VertiPaq doesn't just store columns; it aggressively compresses them using three
 ### 1. [[DAX]] Studio (The Mechanic)
 *   **What it is:** A tool to write, execute, and profile [[DAX]] queries.
 *   **Why use it:**
-    *   **Server Timings:** Shows exactly how long the Formula Engine (DAX) vs. Storage Engine (VertiPaq) took.
+    *   **Server Timings:** Shows exactly how long the Formula Engine ([[DAX]]) vs. Storage Engine (VertiPaq) took.
     *   **Formatting:** One-click "Format DAX" to clean up messy code.
     *   **Export:** Extracting large datasets to CSV faster than Power BI native export.
 *   *Pro Tip:* "I use DAX Studio to check for 'Callback DataID' errors to ensure my measures aren't falling back to the slow Formula engine."

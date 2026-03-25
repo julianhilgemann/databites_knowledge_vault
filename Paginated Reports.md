@@ -10,7 +10,7 @@ They rely on a "Dataset" that executes a [[DAX]] or [[SQL]] query against a "Dat
 ## 2. Parameters (The $N^2$ Problem)
 
 Parameters in Paginated Reports behave differently than slicers in Power BI Desktop.
-When connecting to a Power BI Semantic Model, the query built by Report Builder includes DAX `RSCustomDaxFilter` functions.
+When connecting to a Power BI Semantic Model, the query built by Report Builder includes [[DAX]] `RSCustomDaxFilter` functions.
 
 ```dax
 // Example of DAX built by Report Builder for a Parameter
@@ -22,7 +22,7 @@ EVALUATE SUMMARIZECOLUMNS(
 
 **Warning:** If you have cascading parameters (e.g., Country filters Region, Region filters City), the queries to populate the parameter dropdowns will execute sequentially. If those dropdowns pull from a massive fact table instead of specialized dimension [[Tables|tables]], the report will take minutes just to load the initial UI.
 
-*   **Pro Tip:** Always base parameter datasets on the smallest possible Dimension tables, never Fact tables.
+*   **Pro Tip:** Always base parameter datasets on the smallest possible Dimension [[Tables|tables]], never Fact tables.
 
 ## 3. Pixel-Perfect vs. Interactive Use Cases
 

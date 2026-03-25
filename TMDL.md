@@ -32,7 +32,7 @@ table Customer
 
 #### B. The Measure Definition (The Best Part)
 
-This is the killer feature. In JSON, writing [[DAX]] was painful. In TMDL, **DAX looks like DAX**.
+This is the killer feature. In JSON, writing [[DAX]] was painful. In TMDL, **[[DAX]] looks like DAX**.
 
 ```yaml
     measure 'Total Sales' = SUM(Sales[Amount])
@@ -173,7 +173,7 @@ If asked about **TMDL**, hit these points to sound like an expert:
 
 1.  **"It enables true Code-First Development."**
     (I can write a script to generate a TMDL file to build a standard Date table for every new project automatically).
-2.  **"It solves the Git Merge Nightmare."**
+2.  **"It solves the [[git|Git]] Merge Nightmare."**
     (Because it splits [[Tables|tables]] into separate files, my team can work in parallel without overwriting each other).
 3.  **"It makes Diffing easier."**
     (I can clearly see that a measure formula changed from `SUM` to `AVERAGE` in the Pull Request, without decoding JSON escape characters).

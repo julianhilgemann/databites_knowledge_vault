@@ -28,7 +28,7 @@ RETURN
         CONCATENATEX( VALUES('Dim_Geography'[City]), 'Dim_Geography'[City], ", " )
     )
 ```
-**Pro Tip:** *"I prioritize [[Context|context]] in my reports. If a user prints a PDF, the slicers might not be visible. The Dynamic Title ensures the context is baked into the visual."*
+**Pro Tip:** *"I prioritize [[Context|context]] in my reports. If a user prints a PDF, the slicers might not be visible. The Dynamic Title ensures the [[Context|context]] is baked into the visual."*
 
 ---
 
@@ -110,7 +110,7 @@ RETURN
 2.  Style = **Field Value**.
 3.  Select `[CF Sales Color]`.
 
-**Pro Tip:** *"I centralize my color logic. I create dedicated CF (Conditional Formatting) measures returning Hex codes. This way, if Marketing updates the branding, I update one DAX measure, and the entire dashboard updates instantly."*
+**Pro Tip:** *"I centralize my color logic. I create dedicated CF (Conditional Formatting) measures returning Hex codes. This way, if Marketing updates the branding, I update one [[DAX]] measure, and the entire dashboard updates instantly."*
 
 ---
 

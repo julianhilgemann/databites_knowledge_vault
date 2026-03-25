@@ -104,7 +104,7 @@ This is a critical performance distinction.
 
 **Mechanism:** "Don't overwrite. Intersect."
 
-*   **Context:** By default, `CALCULATE` is a bully. If you say `Color="Red"`, it overwrites any existing color filter.
+*   **[[Context]]:** By default, `CALCULATE` is a bully. If you say `Color="Red"`, it overwrites any existing color filter.
 *   **Behavior:** `KEEPFILTERS` tells `CALCULATE` to respect the existing filter and find the **overlap** (AND logic).
 
 **The Real-world Scenario:**

@@ -34,7 +34,7 @@ This is a visual cue that tells a stakeholder you are experienced.
 
 *   **Measures:** Always use brackets only. `[Total Sales]`
 *   **Columns:** Always include the table name. `Sales[Amount]`
-*   **Why?** When reading code, you immediately know if [[[[Context]] Transition|[[[[Context]] Transition|context transition]]]] is happening.
+*   **Why?** When reading code, you immediately know if [[[[Context]] Transition|[[[[Context]] Transition|[[[[Context]] Transition|context transition]]]]]] is happening.
     *   `CALCULATE( ... , Sales[Color] = "Red")` -> Filtering a **Column**.
     *   `CALCULATE( ... , [Total Sales] > 100)` -> Filtering a **Measure** (Triggers Context Transition).
 
@@ -84,7 +84,7 @@ CALCULATE( [Total Sales], KEEPFILTERS( Sales[Color] = "Red" ) )
 ### 7. [[Time Intelligence]]: Auto vs. Custom
 
 **The Rule:** Never use "Auto Date/Time."
-**The Pro Tip:** *"I disable Auto Date/Time immediately to prevent model bloat (hidden tables) and ensure I can use a standard 4-4-5 or Fiscal calendar using a dedicated Date Dimension."*
+**The Pro Tip:** *"I disable Auto Date/Time immediately to prevent model bloat (hidden [[Tables|tables]]) and ensure I can use a standard 4-4-5 or Fiscal calendar using a dedicated Date Dimension."*
 
 ---
 

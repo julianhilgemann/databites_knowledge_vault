@@ -8,7 +8,7 @@ Microsoft has released **two** distinct types of UDFs. It is critical not to con
     *   **What they are:** You can finally define your own reusable functions in [[DAX]], similar to how you would in Excel or programming languages.
     *   **Syntax:** uses the `DEFINE FUNCTION` keyword.
     *   **Use Case:** Instead of rewriting a complex "Tax Calculation" or "[[Time Intelligence]]" logic inside 50 different measures, you write it once as a Function. You then call `CalculateTax([Sales])` inside your measures.
-    *   **Location:** These are authored in the **DAX Query View** or **[[TMDL]] View**.
+    *   **Location:** These are authored in the **[[DAX]] Query View** or **[[TMDL]] View**.
 
 *   **Fabric User Data Functions (GA - Sep 2025):**
     *   **What they are:** These are **Python/PySpark** functions designed for the Fabric engineering layer.
@@ -18,7 +18,7 @@ Microsoft has released **two** distinct types of UDFs. It is critical not to con
 ### 2. [[TMDL]] Editor in Power BI Desktop
 **Status:** Public Preview (Launched Jan 2025)
 
-*   **The Change:** Power BI Desktop now has a dedicated **"TMDL View"** tab on the left sidebar (alongside Report, Table, and Model views).
+*   **The Change:** Power BI Desktop now has a dedicated **"[[TMDL]] View"** tab on the left sidebar (alongside Report, Table, and Model views).
 *   **What is TMDL?** *Tabular Model Definition Language*. It is a human-readable, YAML-like syntax for defining your data model.
 *   **Capabilities:**
     *   **Code-First Modeling:** You can create measures, calculated columns, and [[Relationships|relationships]] by typing code instead of clicking menus.
@@ -56,7 +56,7 @@ This is the biggest change to the file format in Power BI's history.
 
 If you are working in Power BI today (Dec 2025), your "Pro" workflow looks like this:
 
-1.  Save as **PBIP** (using **PBIR** format) for Git versioning.
+1.  Save as **PBIP** (using **PBIR** format) for [[git|Git]] versioning.
 2.  Use **TMDL View** to write bulk measures and manage the model.
 3.  Use **DAX Query View** to test complex logic and create **UDFs**.
 4.  Use **Fabric User Functions** for upstream data engineering in Notebooks.

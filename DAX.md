@@ -45,7 +45,7 @@ These are the most important functions in the language.
 2.  **`SUMMARIZE( Table, GroupBy_Col )`**
     *   *Role:* Groups data. **Only** use for grouping, not for adding math columns.
 3.  **`VALUES( Column )`**
-    *   *Role:* Returns unique values visible in current context. Includes the Blank row (Invalid Relationship).
+    *   *Role:* Returns unique values visible in current [[Context|context]]. Includes the Blank row (Invalid Relationship).
 4.  **`DISTINCT( Column )`**
     *   *Role:* Returns unique values visible in current context. Excludes the Blank row.
 5.  **`CROSSJOIN( Table1, Table2 )`**
@@ -53,7 +53,7 @@ These are the most important functions in the language.
 6.  **`UNION( Table1, Table2 )`**
     *   *Role:* Stacks [[Tables|tables]] vertically.
 7.  **`TREATAS( Table_Expression, Column_to_Filter )`**
-    *   *Role:* Creates a **Virtual Relationship**. Connects two tables that are not physically connected in the model.
+    *   *Role:* Creates a **Virtual Relationship**. Connects two [[Tables|tables]] that are not physically connected in the model.
 
 ### D. [[Time Intelligence]]
 
@@ -117,7 +117,7 @@ These are the most important functions in the language.
     *   *Use:* Previous row value (for Month-over-Month logic in [[SQL]]).
 
 ### D. Transformation
-1.  **`CASE WHEN x THEN y ELSE z END`** (The SQL version of IF/SWITCH)
+1.  **`CASE WHEN x THEN y ELSE z END`** (The [[SQL]] version of IF/SWITCH)
 2.  **`COALESCE(Col, 0)`** (Handle Nulls)
 3.  **`CAST(Col AS Type)` / `CONVERT`** (Fix [[Data Types|data types]])
 4.  **`STRING_AGG` / `LISTAGG`** (Combine rows into a comma-separated list).
@@ -143,7 +143,7 @@ These are the most important functions in the language.
 1.  **`is_incremental()`** (Jinja macro for [[dbt]])
     *   *Use:* `{% if is_incremental() %} WHERE date > (select max(date) from {{ this }}) {% endif %}`
 2.  **`ref('model_name')`** (Jinja)
-    *   *Use:* Referencing other tables in dbt.
+    *   *Use:* Referencing other tables in [[dbt]].
 3.  **`source('source_name', 'table_name')`** (Jinja)
     *   *Use:* Referencing raw data in dbt.
 

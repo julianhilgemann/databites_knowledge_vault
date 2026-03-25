@@ -45,7 +45,7 @@ These live "upstream" from Power BI.
 **The Structured Storage.**
 *   **What is it?** A traditional relational database experience inside Fabric.
 *   **Engine:** Powered by **T-[[SQL]]**.
-*   **Use Case:** [[SQL]] Developers writing Stored Procedures, DDL, and DML. It feels like SQL Server.
+*   **Use Case:** [[SQL]] Developers writing Stored Procedures, DDL, and DML. It feels like [[SQL]] Server.
 
 #### C. Dataflow Gen2
 **The Low-Code ETL.**
@@ -66,7 +66,7 @@ These tools sit alongside Power BI to enable "Write-back" and Automation.
 #### A. Dataverse
 **The Business Database.**
 *   **What is it?** A smart, cloud-based relational database that powers Dynamics 365 and Power Apps.
-*   **Why not just use SQL?** Dataverse comes with pre-built business logic. It has "Accounts," "Contacts," and "Leads" tables out of the box with security rules already applied.
+*   **Why not just use SQL?** Dataverse comes with pre-built business logic. It has "Accounts," "Contacts," and "Leads" [[Tables|tables]] out of the box with security rules already applied.
 *   **Power BI Connection:** Power BI has a native, optimized connector to Dataverse (DirectQuery or Import).
 
 #### B. Power Automate (Flow)

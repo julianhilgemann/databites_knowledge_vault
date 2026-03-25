@@ -19,7 +19,7 @@ Used for **Transactions** (OLTP). If you transfer money, you want ACID.
 
 ## 2. BASE (The "Social Media" Reality)
 
-**Context:** NoSQL, Big Data, Distributed Systems (CosmosDB, Cassandra).
+**[[Context]]:** NoSQL, Big Data, Distributed Systems (CosmosDB, Cassandra).
 Used for massive scale where speed is more important than perfection.
 
 | Letter | Concept | Definition | Mnemonic / Helper |
@@ -62,7 +62,7 @@ The single most important distinction for modeling.
 
 **Context:** API development, App development.
 
-| Letter | Action | SQL Equivalent | Power BI Context |
+| Letter | Action | [[SQL]] Equivalent | Power BI Context |
 | :--- | :--- | :--- | :--- |
 | **C** | **Create** | `INSERT` | Power Query (Adding columns). |
 | **R** | **Read** | `SELECT` | **99% of Power BI.** |

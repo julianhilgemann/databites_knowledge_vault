@@ -94,7 +94,7 @@ GROUP BY 1 -- Group by the first column
 
 ### The "Snowflake Flex" (Use this to impress them)
 
-Since they use **Snowflake**, there is one magic keyword that standard SQL doesn't have: **`QUALIFY`**.
+Since they use **Snowflake**, there is one magic keyword that standard [[SQL]] doesn't have: **`QUALIFY`**.
 
 If you write a query on the whiteboard, use `QUALIFY`.
 

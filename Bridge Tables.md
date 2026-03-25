@@ -113,7 +113,7 @@ CALCULATE(
 1.  **"I model Bridges in the ETL."**
     (Don't try to create them using [[DAX]] Calculated [[Tables]]. Do it in [[SQL]]).
 2.  **"I watch out for Ambiguity."**
-    (Bridge tables introduce multiple paths between tables. I carefully check my "Filter Direction" arrows).
+    (Bridge [[Tables|tables]] introduce multiple paths between tables. I carefully check my "Filter Direction" arrows).
 3.  **"I handle Weights."**
     (I know that Bridges cause rows to appear multiple times, so I have a strategy—either accepting the overlap or applying a weight).
 

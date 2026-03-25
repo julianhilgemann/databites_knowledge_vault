@@ -91,7 +91,7 @@ If your source system gives you GUIDs or Composite Keys, do not just load them i
     *   Add a column `Customer_SK` (Surrogate Key) that is an **Identity/Auto-Increment Integer**.
     *   Keep the `Customer_GUID` as a secondary attribute (for reference only).
 
-2.  **In the Fact Table (SQL):**
+2.  **In the Fact Table ([[SQL]]):**
     *   Join `Sales` with `Customer_Dim` on `Customer_GUID`.
     *   Bring in the new `Customer_SK` (Integer).
     *   **Drop** the `Customer_GUID` from the Fact table entirely.

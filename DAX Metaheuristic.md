@@ -30,7 +30,7 @@ When I write or debug [[DAX]], I run this 4-step [[Simulation|simulation]] in my
 
 **"What is the math, and did I trigger [[Context Transition]]?"**
 *   Apply the math: `SUM`, `RANKX`, `DIVIDE`.
-*   **The Senior Check:** "Did I wrap this in `CALCULATE`? If so, my Row [[Context]] just transformed into Filter Context."
+*   **The Senior Check:** "Did I wrap this in `CALCULATE`? If so, my Row [[Context]] just transformed into Filter [[Context]]."
 
 ---
 

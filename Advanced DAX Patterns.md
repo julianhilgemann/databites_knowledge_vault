@@ -176,6 +176,6 @@ SUMX(
 | **Data Lineage** | Mismatched Grains. | `TREATAS` to creating virtual joins. |
 
 ### Mnemonic: **"A.R.T."**
-*   **A**ddColumns (for Virtual Tables).
+*   **A**ddColumns (for Virtual [[Tables]]).
 *   **R**ankX (for Ordering).
-*   **T**reatAs (for Virtual Relationships).
+*   **T**reatAs (for Virtual [[Relationships]]).

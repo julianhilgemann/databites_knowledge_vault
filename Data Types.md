@@ -17,17 +17,17 @@ Power BI loads data into the **[[Vertipaq|VertiPaq]] Engine**. It is highly opti
 
 ### 2. [[SQL]] Data Types (The Source)
 
-[[SQL]] databases (like SQL Server, Postgres, Oracle) focus on storage efficiency and strict constraints.
+[[SQL]] databases (like [[SQL]] Server, Postgres, Oracle) focus on storage efficiency and strict constraints.
 
 | SQL Data Type | Description | Handling of NULL | Power BI Import Implication |
 | :--- | :--- | :--- | :--- |
-| **INT / BIGINT** | Standard Integers.<br>(Int = 4 bytes, BigInt = 8 bytes). | `NULL` + 5 = **NULL**<br>(Null propagates). | **Ideal.**<br>Maps directly to DAX Whole Number. `BIGINT` is safer for massive ID ranges. |
+| **INT / BIGINT** | Standard Integers.<br>(Int = 4 bytes, BigInt = 8 bytes). | `NULL` + 5 = **NULL**<br>(Null propagates). | **Ideal.**<br>Maps directly to [[DAX]] Whole Number. `BIGINT` is safer for massive ID ranges. |
 | **VARCHAR(n)** | Variable length non-Unicode text. | `NULL` is distinct from Empty String `''`. | **Conversion.**<br>Power BI converts this to Unicode Text. Efficient in SQL, but PBI will expand it. |
 | **NVARCHAR(n)** | Variable length **Unicode** text. | Same as Varchar. | **Native Match.**<br>Matches Power BI's text engine directly. Preferred if your data contains special characters/accents. |
 | **DECIMAL(p,s)**<br>*(e.g. 19,4)* | Fixed precision math. Exact storage. | Propagates NULL. | **Maps to Fixed Decimal.**<br>If scale is $\le$ 4, PBI detects as Currency/Fixed Decimal. If scale > 4, PBI forces to Floating Point. |
 | **FLOAT** | Approximate Number (Scientific notation). | Propagates NULL. | **Rounding Issues.**<br>Try to cast to DECIMAL in SQL views before importing to ensure totals match exactly. |
 | **BIT** | 0 or 1. | Propagates NULL. | **Maps to Boolean.**<br>PBI reads this as True/False automatically. |
-| **GUID / UUID** | 16-byte unique identifier. | Propagates NULL. | **Performance Hit.**<br>Import as Text. Very slow for PBI [[Relationships|relationships]] due to size and high uniqueness (cardinality). Use Integers for keys instead. |
+| **GUID / UUID** | 16-byte unique identifier. | Propagates NULL. | **Performance Hit.**<br>Import as Text. Very slow for PBI [[Relationships|relationships]] due to size and high uniqueness ([[Cardinality|cardinality]]). Use Integers for keys instead. |
 
 ---
 

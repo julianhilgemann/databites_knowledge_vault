@@ -42,7 +42,7 @@ This is the standard architectural pattern you should describe.
     *   Here, the Security Table filters the Dimension.
     *   You must check the box: **"Apply security filter in both directions"** (if the security table is hidden/disconnected) OR ensure the filter flows downhill to the Fact.
 
-4.  **The DAX Rule:**
+4.  **The [[DAX]] Rule:**
     On the `RLS_Users` table, add this filter:
     ```dax
     [UserEmail] = USERPRINCIPALNAME()

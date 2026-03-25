@@ -37,7 +37,7 @@ These questions are categorized by domain and graded by difficulty. Use this to 
 
 ---
 
-### Phase 2: DAX & The Engine
+### Phase 2: [[DAX]] & The Engine
 *The "Live Coding" Stage.*
 
 #### Q4: "Explain what happens when I put the measure `[Total Sales]` inside a `FILTER` function."
@@ -47,7 +47,7 @@ These questions are categorized by domain and graded by difficulty. Use this to 
     1.  `FILTER` is an iterator. It creates a **Row [[Context]]**.
     2.  Because `[Total Sales]` is a measure, it has a hidden `CALCULATE` wrapped around it.
     3.  This triggers **[[Context Transition]]**.
-    4.  The current row in the iteration is transformed into a **Filter Context**.
+    4.  The current row in the iteration is transformed into a **Filter [[Context]]**.
     5.  The measure calculates Sales *specifically for that row*.
 
 #### Q5: "Our 'Year-over-Year' calculation is slow. It takes 10 seconds to load. How do you debug and fix it?"
@@ -60,7 +60,7 @@ These questions are categorized by domain and graded by difficulty. Use this to 
         *   Are we using `FILTER(Table)` instead of `KEEPFILTERS` or `FILTER(ALL(Column))`?
         *   Are there unnecessary **Context Transitions**?
         *   Can we move logic upstream to [[SQL]]?
-        *   Are we using **Bi-Directional** relationships?
+        *   Are we using **Bi-Directional** [[Relationships|relationships]]?
 
 #### Q6: "How do you handle 'Totals' in a Matrix visual that don't add up correctly?"
 *   **Difficulty:** Mid-Level
@@ -80,9 +80,9 @@ These questions are categorized by domain and graded by difficulty. Use this to 
 *   **The Specialist Answer:**
     1.  Stop saving as `.pbix`. Save as **Power BI Project (.pbip)**.
     2.  Enable **[[TMDL]]** to store the model definition as text (YAML-like) instead of JSON.
-    3.  Use **Git** (Azure DevOps/GitHub). Create a repo.
+    3.  Use **[[git|Git]]** (Azure DevOps/GitHub). Create a repo.
     4.  Implement a **Branching Strategy**: Developers work on `feature/branches` and create Pull Requests (PRs) to merge into `main`.
-    5.  TMDL allows us to resolve merge conflicts line-by-line.
+    5.  [[TMDL]] allows us to resolve merge conflicts line-by-line.
 
 #### Q8: "What is the difference between DirectQuery and Direct Lake in Fabric?"
 *   **Difficulty:** Senior (Fabric specific).
@@ -95,7 +95,7 @@ These questions are categorized by domain and graded by difficulty. Use this to 
 *   **Difficulty:** Core Competency.
 *   **What they are testing:** Power Query efficiency.
 *   **The Specialist Answer:**
-    1.  **Definition:** Power Query translating M steps into a single SQL statement.
+    1.  **Definition:** Power Query translating M steps into a single [[SQL]] statement.
     2.  **Why:** If it breaks, the mashup engine pulls **all raw data** into local RAM to process it. This fails on large datasets (Timeout/OOM).
     3.  **Criticality:** **[[Incremental Refresh]]** *requires* folding to dynamically inject `RangeStart` and `RangeEnd` parameters into the SQL `WHERE` clause.
 

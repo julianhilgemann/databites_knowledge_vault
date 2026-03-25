@@ -29,7 +29,7 @@ You should generally avoid Calculated Tables and prefer Power Query (M) or [[SQL
 
 # 2. SUMMARIZE & SUMMARIZECOLUMNS (The Grouping Engines)
 
-These functions behave like `GROUP BY` in SQL.
+These functions behave like `GROUP BY` in [[SQL]].
 
 ### A. `SUMMARIZE`
 
@@ -114,7 +114,7 @@ RETURN
 # Summary Checklist
 
 1.  **"Calculated Tables are Static."**
-    (I try to do this upstream in SQL/[[dbt]]. I only use DAX tables for Date tables or Parameter generation).
+    (I try to do this upstream in SQL/[[dbt]]. I only use [[DAX]] tables for Date tables or Parameter generation).
 2.  **"Virtual Tables are Dynamic."**
     (This is my primary tool for 'Second Level' aggregations, like calculating the Average Daily Sales per Store).
 3.  **"The `ADDCOLUMNS` Pattern."**

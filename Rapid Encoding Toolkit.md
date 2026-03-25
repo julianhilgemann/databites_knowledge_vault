@@ -8,7 +8,7 @@
     2.  **The Prompt:** "Why did you choose a [[Star Schema]] over one big table? Why did you use `SUMMARIZE` here instead of `GROUP BY` in [[SQL]]?"
     3.  **The Drill:** Explain the **Architecture**.
         *   *Bad:* "[[Star Schema|Star schema]] is better because it has facts and dims."
-        *   *Good:* "I chose a Star Schema to optimize for the **[[Vertipaq|VertiPaq]] engine**, which compresses narrow columns better than wide [[Tables|tables]]. It also allows us to use standard **[[Time Intelligence]]** functions without complex [[DAX]] workarounds."
+        *   *Good:* "I chose a [[Star Schema]] to optimize for the **[[Vertipaq|VertiPaq]] engine**, which compresses narrow columns better than wide [[Tables|tables]]. It also allows us to use standard **[[Time Intelligence]]** functions without complex [[DAX]] workarounds."
 
 ### 2. The "Notepad" Purge (Anti-Copilot Training)
 
@@ -42,7 +42,7 @@
 *   **The Method:**
     1.  On a whiteboard or tablet (Obsidian Canvas/Excalidraw).
     2.  Draw the flow: **Raw Data $\to$ Lakehouse $\to$ [[dbt]] (Star Schema) $\to$ [[TMDL]] (Semantic Model) $\to$ PBIP (Report) $\to$ App**.
-    3.  Annotate *where* the logic lives. (e.g., "I do SCD Type 2 logic *here* in dbt, so the DAX *here* is simple").
+    3.  Annotate *where* the logic lives. (e.g., "I do SCD Type 2 logic *here* in [[dbt]], so the [[DAX]] *here* is simple").
 
 ### 5. The "Hybrid Sprint" ([[Simulation]])
 
@@ -50,7 +50,7 @@
 *   **Why:** Proves that AI makes you faster, but you are the pilot.
 *   **The Method:**
     1.  Set timer for 30 mins.
-    2.  **Prompt:** "Build a YoY calculation that handles [[[[Context]] Transition|[[[[Context]] Transition|context transition]]]] correctly."
+    2.  **Prompt:** "Build a YoY calculation that handles [[[[Context]] Transition|[[[[Context]] Transition|[[[[Context]] Transition|context transition]]]]]] correctly."
     3.  **Phase 1 (20 mins):** Write it manually in Notepad. Struggle with it.
     4.  **Phase 2 (5 mins):** Paste it into ChatGPT. Prompt: *"Act as a Senior Principal Engineer. Code Review this DAX. Do not rewrite it, just point out potential performance flaws or context risks."*
     5.  **Phase 3 (5 mins):** Fix your own code based on the feedback.
@@ -61,5 +61,5 @@
 *   **The Adjustment:** Focus purely on the high-level [[Vocabulary|vocabulary]] that justifies your 2 years of experience.
 *   **The Cards:**
     *   *Front:* "Why use [[TMDL]]?" $\to$ *Back:* "To enable [[git|Git]] merge conflict resolution and code-first bulk editing."
-    *   *Front:* "Difference between DirectQuery and Direct Lake?" $\to$ *Back:* "DirectQuery translates DAX to SQL (Slow). Direct Lake reads Parquet columns into RAM (Fast)."
+    *   *Front:* "Difference between DirectQuery and Direct Lake?" $\to$ *Back:* "DirectQuery translates DAX to [[SQL]] (Slow). Direct Lake reads Parquet columns into RAM (Fast)."
     *   *Front:* "What is Context Transition?" $\to$ *Back:* "When `CALCULATE` forces a Row Context to become a Filter Context."

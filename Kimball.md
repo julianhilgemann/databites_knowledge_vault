@@ -74,7 +74,7 @@ This is how you prevent "Silos" of data.
 
 ---
 
-## 4. The Three Types of Fact Tables
+## 4. The Three Types of Fact [[Tables]]
 
 Kimball identifies three distinct patterns. Mixing these in one Power BI table is a common mistake.
 
@@ -101,7 +101,7 @@ How does the 1990s theory hold up in 2024?
 
 | Kimball Rule | Modern Data Engineering / Power BI Reality |
 | :--- | :--- |
-| **"[[Star Schema]] is King"** | **TRUE.** [[Vertipaq|VertiPaq]] is essentially a Star Schema engine. |
+| **"[[Star Schema]] is King"** | **TRUE.** [[Vertipaq|VertiPaq]] is essentially a [[Star Schema]] engine. |
 | **"Surrogate Keys (Integers)"** | **TRUE.** Mandatory for performance in Power BI. |
 | **"ETL at Night"** | **PARTIAL.** Power BI allows [[Incremental Refresh|incremental refresh]], but the logic of preparing clean dimensions remains the same. |
 | **"One Version of the Truth"** | **TRUE.** Handled via "Shared Datasets" (One Power BI Dataset used by 20 reports). |
@@ -111,7 +111,7 @@ How does the 1990s theory hold up in 2024?
 ### The "One Big Table" (OBT) Debate
 
 Modern Data Warehouses (Snowflake/BigQuery) are so fast that some engineers skip Kimball and just make "One Big Table."
-*   **In SQL:** This works fine.
+*   **In [[SQL]]:** This works fine.
 *   **In Power BI:** **Do not do this.** Power BI has a 10GB-100GB limit (usually). OBT is inefficient with memory. Kimball's [[Normalization|normalization]] of text into Dimensions allows Power BI to compress data 10x-50x smaller than OBT.
 
 ### Final Takeaway
@@ -119,5 +119,5 @@ Modern Data Warehouses (Snowflake/BigQuery) are so fast that some engineers skip
 Think of **Ralph Kimball** as the original architect of Power BI's brain.
 If you prepare your data in SQL using **Kimball's Star Schema**, your Power BI reports will be:
 1.  **Fast** ([[Relationships]] work instantly).
-2.  **Simple** (DAX formulas are short).
+2.  **Simple** ([[DAX]] formulas are short).
 3.  **Accurate** (No orphan records or ambiguous joins).

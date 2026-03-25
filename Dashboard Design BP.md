@@ -89,7 +89,7 @@ Ensuring the report is usable by everyone is a hallmark of a mature developer.
 If you want to impress a CFO or highly technical stakeholders, mention **[[IBCS]]**. It is a strict standard for financial reporting visuals.
 
 *   **Scenario:** Comparing Actuals vs. Budget.
-*   **IBCS Rule:**
+*   **[[IBCS]] Rule:**
     *   **Actuals:** Solid Black/Dark bars.
     *   **Budget:** Hollow (Outlined) bars.
     *   **Forecast:** Hatched (Striped) bars.

@@ -53,7 +53,7 @@ This distinction is critical for data manipulation.
 | **INNER JOIN** | **Intersection.** Only rows that exist in BOTH [[Tables|tables]]. | Unmatched rows are dropped. |
 | **LEFT JOIN** | **Master List.** All rows from Left table, matching rows from Right. | Unmatched Right rows become `NULL`. |
 | **RIGHT JOIN** | Inverse of Left. Rarely used (just swap table order and use Left). | Unmatched Left rows become `NULL`. |
-| **FULL OUTER JOIN**| **Union.** All rows from Both tables. | Lots of `NULLs` on both sides. |
+| **FULL OUTER JOIN**| **Union.** All rows from Both [[Tables|tables]]. | Lots of `NULLs` on both sides. |
 | **CROSS JOIN** | **Cartesian Product.** Every row in A paired with every row in B. | **Danger:** 100 rows x 100 rows = 10,000 rows. |
 
 **Best Practice:**

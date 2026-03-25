@@ -106,7 +106,7 @@ Title = "Report for: " & SELECTEDVALUE( 'Date'[Year], "All Years" )
 *   Stop writing code.
 *   Look at a blank wall.
 *   **Simulate:** "I need to calculate the Rank of a product."
-*   **Practice the Pivot:** *"I would use `RANKX`. I need to pass it the Table, but I must wrap the table in `ALL` to remove the filter context, otherwise every product ranks as #1. Then I pass the Measure."*
+*   **Practice the Pivot:** *"I would use `RANKX`. I need to pass it the Table, but I must wrap the table in `ALL` to remove the filter [[Context|context]], otherwise every product ranks as #1. Then I pass the Measure."*
 *   **Simulate:** "I need a Moving Annual Total."
 *   **Practice the Pivot:** *"I use `CALCULATE` with `DATESINPERIOD`. I grab the date column, start at the MAX date visible, and look back minus 12 MONTHs."*
 

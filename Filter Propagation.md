@@ -94,7 +94,7 @@ You go to "Manage [[Relationships]]" and change the `Fact_Sales` <-> `Dim_Custom
 
 Keep the relationship as **Single**. Use [[DAX]] to force the filter upstream *only when needed*.
 
-### The DAX Solution: `CROSSFILTER`
+### The [[DAX]] Solution: `CROSSFILTER`
 
 ```dax
 Customers Who Bought Item = 
@@ -123,7 +123,7 @@ CALCULATE(
 When you inherit a Power BI file, look for these visual indicators and code patterns.
 
 ### 1. The Relationship Arrows (Model View)
-Look at the lines connecting your tables.
+Look at the lines connecting your [[Tables|tables]].
 
 *   **`1 -> *` (Single Arrow):**
     *   *Meaning:* Filters flow from One to Many.

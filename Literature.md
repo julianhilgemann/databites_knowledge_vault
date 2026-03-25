@@ -19,7 +19,7 @@
 *   **⚡ Focus Chapters:**
     *   **Chapter 4:** *Understanding Evaluation Contexts* (Row vs. Filter [[Context]]—Crucial).
     *   **Chapter 5:** *Understanding CALCULATE and CALCULATETABLE* ([[Context Transition]]).
-    *   **Chapter 15:** *Advanced DAX Concepts* (Specifically the section on *Expanded [[Tables]]*—the advanced "Specialist" concept).
+    *   **Chapter 15:** *Advanced [[DAX]] Concepts* (Specifically the section on *Expanded [[Tables]]*—the advanced "Specialist" concept).
 
 ## 3. Data Visualization (The Design)
 
@@ -35,7 +35,7 @@
 
 **Book:** ***T-[[SQL]] Fundamentals***
 **Author:** Itzik Ben-Gan
-**Why:** Ben-Gan teaches SQL as **Set Theory**, not just code. This "Set-based thinking" is the perfect mental bridge to understanding DAX.
+**Why:** Ben-Gan teaches [[SQL]] as **Set Theory**, not just code. This "Set-based thinking" is the perfect mental bridge to understanding DAX.
 
 *   **⚡ Focus Chapters:**
     *   **Chapter 1:** *Background to T-SQL Querying* (Specifically: **Logical Query Processing Order**—knowing that `FROM` runs before `SELECT`).
@@ -55,4 +55,4 @@
 ### 💡 The "One-Liner" Drop
 If you want to sound like an insider in practice, drop this line:
 
-> *"I treat **Kimball's** Toolkit as the blueprint for the architecture, and **Russo & Ferrari's** Definitive Guide as the manual for the engine. I don't guess with the model; I follow the standard."*
+> *"I treat **[[Kimball]]'s** Toolkit as the blueprint for the architecture, and **Russo & Ferrari's** Definitive Guide as the manual for the engine. I don't guess with the model; I follow the standard."*

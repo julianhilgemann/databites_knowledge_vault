@@ -9,7 +9,7 @@
 - [ ] **Conformed Dimensions**: Shared dimensions (Customer, Product) across multiple business processes.
 - [ ] **The Bus Matrix**: Mapping business processes (Rows) to dimensions (Columns).
 
-### B. Fact Tables
+### B. Fact [[Tables]]
 
 - [ ] **Transaction Facts**: Events at a specific point in time (e.g., Sales, Clicks).
 - [ ] **Periodic Snapshot Facts**: Status at regular intervals (e.g., Daily Inventory, Monthly Balance).
@@ -37,7 +37,7 @@
 - [ ] **Many-to-Many Handling**:
     - [ ] [[Bridge Tables]] (The standard [[Kimball]] approach).
     - [ ] Bi-directional filtering (The risky Power BI approach).
-- [ ] **Bi-Directional Relationships**: Ambiguity risks and performance impact.
+- [ ] **Bi-Directional [[Relationships]]**: Ambiguity risks and performance impact.
 
 ---
 
@@ -60,7 +60,7 @@
 ### A. Evaluation [[Context]] (Crucial)
 
 - [ ] **Row [[Context]]**: Concept of "Current Row" (Calculated columns, Iterators).
-- [ ] **Filter Context**: Active filters from visuals, slicers, and RLS.
+- [ ] **Filter [[Context]]**: Active filters from visuals, slicers, and RLS.
 - [ ] **[[Context Transition]]**: How `CALCULATE` turns Row Context into Filter Context.
 
 ### B. Core Syntax & Calculations
@@ -103,7 +103,7 @@
 - [ ] **Joins**: INNER, LEFT, RIGHT, FULL OUTER (and how they affect row counts).
 - [ ] **Aggregation**: GROUP BY, HAVING vs. WHERE.
 
-### B. Analytical SQL
+### B. Analytical [[SQL]]
 
 - [ ] **Window Functions**: `RANK()`, `ROW_NUMBER()`, `LEAD()`, `LAG()`.
 - [ ] **CTEs (Common Table Expressions)**: Using `WITH` for readable, modular code.
@@ -134,7 +134,7 @@
 - [ ] **[[Vertipaq|VertiPaq]] Engine**: Columnar storage principles.
 - [ ] **[[Cardinality]]**: Why high-[[Cardinality|cardinality]] columns (UUIDs, timestamps) bloat model size.
 - [ ] **Performance Analyzer**: Identifying bottlenecks ([[DAX]] vs. Visual vs. DirectQuery).
-- [ ] **DAX Studio**: Basics of Server Timings.
+- [ ] **[[DAX]] Studio**: Basics of Server Timings.
 
 ### B. Security
 
@@ -232,7 +232,7 @@
 
 ### B. [[dbt]] (Data Build Tool) Concepts
 
-- [ ] **The "T" in ELT**: Understanding dbt does transformation, not extraction/load.
+- [ ] **The "T" in ELT**: Understanding [[dbt]] does transformation, not extraction/load.
 - [ ] **Project Structure**:
     - [ ] **Sources**: Defining raw data connections.
     - [ ] **Staging (stg)**: 1:1 with source, renaming columns to snake_case, basic casting.
@@ -244,7 +244,7 @@
     - [ ] `incremental`: Only processing new/changed rows (crucial for big data).
     - [ ] `ephemeral`: Reusable code snippets (CTE injection).
 
-### C. dbt & Kimball Implementation
+### C. dbt & [[Kimball]] Implementation
 
 - [ ] **Snapshots**:
     - [ ] Implementing **SCD Type 2** automatically using `dbt snapshot`.

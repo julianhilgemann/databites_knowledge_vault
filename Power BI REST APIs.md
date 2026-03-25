@@ -40,8 +40,8 @@ When Azure Data Factory or [[dbt]] finishes loading the [[SQL]] data warehouse, 
 Large enterprises quickly lose track of what assets exist. The Admin Scanner APIs (`GetWorkspaceInfo`, `GetScanResult`) allow an administrator to bulk extract the entire metadata of a tenant:
 *   What datasets exist?
 *   Who has access to what, exactly?
-*   Are there personal gateways pointing to dangerous unencrypted SQL endpoints?
-*   What tables and columns are actually being used by reports?
+*   Are there personal gateways pointing to dangerous unencrypted [[SQL]] endpoints?
+*   What [[Tables|tables]] and columns are actually being used by reports?
 
 ## 4. Automation via PowerShell
 

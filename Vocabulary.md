@@ -22,9 +22,9 @@
 | :--- | :--- | :--- |
 | **Evaluation [[Context]]** | The environment a formula runs in (Row vs. Filter). | "Understanding this is the difference between a Junior and a Senior dev." |
 | **Row [[Context]]** | "The Finger." Iterating line-by-line. | "It iterates, it doesn't filter. Unless we use `CALCULATE` ([[Context Transition]])." |
-| **Filter Context** | "The Box." The active filters from slicers/visuals. | "Every measure starts here. `CALCULATE` is the only way to modify it." |
+| **Filter [[Context]]** | "The Box." The active filters from slicers/visuals. | "Every measure starts here. `CALCULATE` is the only way to modify it." |
 | **[[Context Transition]]** | Turning Row Context into Filter Context. | "This is why we wrap expressions in `CALCULATE` inside iterators—to make sure the filter propagates." |
-| **Cardinality** | The number of *unique* values in a column. | "**High Cardinality** is the #1 driver of model size. I optimize by splitting DateTime into Date and Time." |
+| **[[Cardinality]]** | The number of *unique* values in a column. | "**High Cardinality** is the #1 driver of model size. I optimize by splitting DateTime into Date and Time." |
 | **[[Query Folding]]** | Pushing transformation logic back to [[SQL]]. | "I always check 'View Native Query' to ensure I haven't broken folding, which kills refresh speed." |
 | **[[Vertipaq|VertiPaq]]** | The In-Memory Columnar Database engine of PBI. | "It compresses data by column. That's why wide [[Tables|tables]] are fine, but high unique values are bad." |
 | **[[Calculation Groups]]** | Dynamic measure switching logic. | "I use these to replace 20 individual [[Time Intelligence]] measures (YTD/MOM) with one Calculation Item." |
@@ -38,11 +38,11 @@
 | Term | The "Specialist" Definition | The Pro Tip (Why it matters) |
 | :--- | :--- | :--- |
 | **Execution Order** | The logic flow: FROM $\to$ WHERE $\to$ GROUP $\to$ SELECT. | "I know I can't filter by a SELECT Alias in the WHERE clause because the Alias hasn't been created yet." |
-| **CTE** | Common Table Expression (`WITH...`). | "I use CTEs over nested subqueries for readability, similar to using `VAR` in DAX." |
-| **Window Function** | `RANK()`, `LAG()`, `ROW_NUMBER()` `OVER...` | "I prefer calculating complex ranks or previous-row logic in SQL window functions before PBI loads it." |
+| **CTE** | Common Table Expression (`WITH...`). | "I use CTEs over nested subqueries for readability, similar to using `VAR` in [[DAX]]." |
+| **Window Function** | `RANK()`, `LAG()`, `ROW_NUMBER()` `OVER...` | "I prefer calculating complex ranks or previous-row logic in [[SQL]] window functions before PBI loads it." |
 | **Materialized View** | A view that is physically stored/cached. | "If the SQL query is too slow for DirectQuery, I materialize the view to speed up the read." |
 | **ACID** | Atomicity, Consistency, Isolation, Durability. | "For transactional integrity in the source, I rely on ACID. For analytics, I accept eventual consistency." |
-| **dbt Materialization** | How dbt saves the model (View, Table, Incremental). | "I use **Incremental** models for massive Fact [[Tables|tables]] to only process the delta (new rows) and save compute." |
+| **[[dbt]] Materialization** | How dbt saves the model (View, Table, Incremental). | "I use **Incremental** models for massive Fact [[Tables|tables]] to only process the delta (new rows) and save compute." |
 | **Predicate Pushdown** | The database optimizing a query by filtering early. | "I write clean DAX to ensure Power BI can push the `WHERE` clause down to the SQL Source (Folding)." |
 
 ---

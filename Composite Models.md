@@ -16,7 +16,7 @@ When a visual requires data from both the remote Hub and the local Spoke, the [[
 2. Receive the summary table over the network.
 3. Mash it up internally against the local Excel data in the formula engine.
 
-If the [[Cardinality|cardinality]] of the join column is very high (e.g., joining on Transaction ID), the network payload will be enormous, and the formula engine will crash or perform terribly. Join only on low-cardinality dimension keys (e.g., Region, Product Category).
+If the [[Cardinality|cardinality]] of the join column is very high (e.g., joining on Transaction ID), the network payload will be enormous, and the formula engine will crash or perform terribly. Join only on low-[[Cardinality|cardinality]] dimension keys (e.g., Region, Product Category).
 
 ## 3. Storage Modes
 
@@ -31,6 +31,6 @@ To optimize a Composite Model, you must understand the storage modes:
 If the remote "Hub" model has [[Row Level Security]] (RLS) applied, the identity of the end-user viewing the "Spoke" report is inherently passed through via Single Sign-On (SSO). RLS rules cannot be bypassed by chaining models.
 
 ### Summary Checklist
-- [ ] Are cross-island relationships strictly using low-cardinality dimensions?
+- [ ] Are cross-island [[Relationships|relationships]] strictly using low-cardinality dimensions?
 - [ ] Are common dimensions set to "Dual" storage mode?
 - [ ] Is the business aware that chaining models adds a layer of rendering latency?

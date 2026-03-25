@@ -56,4 +56,4 @@ Instead of expanding JSON rows into a massive Cartesian product, operate on the 
 - [ ] Are repetitive transformations abstracted into Custom Functions?
 - [ ] Have known volatile columns been wrapped in `try ... otherwise`?
 - [ ] Are small lookup [[Tables|tables]] fully `Table.Buffer`ed before being joined repeatedly?
-- [ ] Has Query Folding been maximized before applying native M functions?
+- [ ] Has [[Query Folding]] been maximized before applying native M functions?

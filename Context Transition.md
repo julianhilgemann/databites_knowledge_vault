@@ -37,7 +37,7 @@ $$E[Y] = \sum_{all} y_i \cdot P(y_i)$$
 ---
 
 ### 2. The Math: Conditional Expectation ($E[Y | X]$)
-*This is **Context Transition**.*
+*This is **[[Context]] Transition**.*
 
 You are standing at Row 1 ($x_1=A$).
 Now, you apply **Context Transition**. You are no longer asking for the global mean. You are asking for the **Conditional Mean** given the current row's $X$ value.
@@ -54,7 +54,7 @@ $$E[Y \mid X = x_i] = \sum y \cdot \frac{P(X=x_i, Y=y)}{P(X=x_i)}$$
     *   The subset is $\{80\}$.
     *   Calculation: $\frac{80}{1} = \mathbf{80}$
 
-#### The DAX Code:
+#### The [[DAX]] Code:
 ```dax
 'Table'[Conditional_Mean] = 
 CALCULATE(

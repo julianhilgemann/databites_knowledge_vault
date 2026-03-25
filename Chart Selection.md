@@ -44,7 +44,7 @@ There are only 5 jobs data usually does:
     *   *Why:* The human brain struggles to compare angles.
 *   **The Standard:** **Donut Chart.** (Better, because you can put the Total KPI in the center).
 *   **The "Pro" Move:** **Tree Map.**
-    *   *Context:* When you have hierarchical data (e.g., Category $\to$ SubCategory). It uses rectangular area, which is easier to estimate than slices.
+    *   *[[Context]]:* When you have hierarchical data (e.g., Category $\to$ SubCategory). It uses rectangular area, which is easier to estimate than slices.
 *   **The Specialist Move:** **Decomposition Tree.**
     *   *Why:* It allows the *user* to choose how to break down the composition (Ad-hoc analysis). "Let me break this down by Region... now by Product... now by Sales Rep."
 

@@ -12,7 +12,7 @@
 
 #### A. The "Right-Click" Method (Basic)
 Right-click the last step in Power Query $\to$ **"View Native Query."**
-*   **Enabled:** Folding is happening. You can see the SQL.
+*   **Enabled:** Folding is happening. You can see the [[SQL]].
 *   **Greyed Out:** Folding *might* have broken.
     *   *Note:* This is not 100% reliable. Some connectors (like Snowflake or OData) fold but don't show the native query in the UI.
 
@@ -70,7 +70,7 @@ in
 ### 5. Why it is Non-Negotiable
 
 #### A. [[Incremental Refresh]]
-Incremental Refresh **requires** Query Folding.
+[[Incremental Refresh]] **requires** Query Folding.
 Power BI needs to dynamically inject `WHERE Date >= RangeStart AND Date < RangeEnd` into the SQL query. If it can't fold, it can't create the partitions, and it downloads the whole table every time.
 
 #### B. DirectQuery

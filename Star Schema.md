@@ -88,7 +88,7 @@ Power BI requires a dedicated Date Dimension for [[Time Intelligence]] functions
 
 ---
 
-## Part 4: Handling Multiple Fact Tables (The "Galaxy" Schema)
+## Part 4: Handling Multiple Fact [[Tables]] (The "Galaxy" Schema)
 
 Real-world projects often have multiple processes (e.g., *Sales* and *Budget*). This is called a **Galaxy Schema** (multiple Stars sharing Dimensions).
 
@@ -109,7 +109,7 @@ Real-world projects often have multiple processes (e.g., *Sales* and *Budget*). 
 
 | Feature | Best Practice | Why? |
 | :--- | :--- | :--- |
-| **Schema Shape** | **Star** | Fastest performance; easiest DAX. |
+| **Schema Shape** | **Star** | Fastest performance; easiest [[DAX]]. |
 | **Relationship** | **1:Many** | Native to the engine. |
 | **Filter Direction** | **Single** (Dim $\to$ Fact) | Prevents ambiguity and circular logic loops. |
 | **Key Type** | **Integer** (Surrogate) | Minimum RAM usage; fastest joins. |
@@ -122,5 +122,5 @@ Real-world projects often have multiple processes (e.g., *Sales* and *Budget*). 
 **"Push logic upstream."**
 If you are writing complex DAX to [[Bridge Tables|bridge tables]] or clean up data, you have a modeling problem.
 *   Join tables in [[SQL]]/Power Query.
-*   Clean columns in SQL/Power Query.
+*   Clean columns in [[SQL]]/Power Query.
 *   Let the Model simply *exist* as a clean Star Schema so DAX can focus on math, not structural fixes.

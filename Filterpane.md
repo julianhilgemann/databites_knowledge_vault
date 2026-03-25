@@ -13,7 +13,7 @@ Here are the specific interactions to be aware of:
     *   Filter Pane (Page Level): `Color = "Blue"`
     *   Measure: `Red Sales = CALCULATE( [Total Sales], Product[Color] = "Red" )`
 *   **Result:** The Measure displays **Red Sales**.
-*   **Why:** The measure's internal filter (`Color="Red"`) replaces the incoming filter context from the Pane (`Color="Blue"`).
+*   **Why:** The measure's internal filter (`Color="Red"`) replaces the incoming filter [[Context|context]] from the Pane (`Color="Blue"`).
 *   **The Fix:** If you want the measure to return BLANK because Red is not Blue (i.e., respect the user's selection), you must use `KEEPFILTERS`.
     ```dax
     Safe Red Sales = CALCULATE( [Total Sales], KEEPFILTERS( Product[Color] = "Red" ) )
@@ -59,7 +59,7 @@ You can drag a **Measure** into the Filter Pane (e.g., "Show items where [Total 
 
 *   **Mechanism:** This forces the engine to iterate through every single dimension combination in the visual, run the measure, check the result, and then filter.
 *   **Performance Warning:** This is extremely expensive (slow).
-*   **DAX Interaction:** If your DAX measure inside the visual *also* does complex [[Context Transition]], having a Measure Filter in the pane adds a second layer of iteration. This is a common cause of "Resource Exceeded" errors.
+*   **[[DAX]] Interaction:** If your DAX measure inside the visual *also* does complex [[Context Transition]], having a Measure Filter in the pane adds a second layer of iteration. This is a common cause of "Resource Exceeded" errors.
 
 ### Summary Checklist
 

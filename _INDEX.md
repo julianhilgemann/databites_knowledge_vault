@@ -4,6 +4,7 @@
 *Tools to help you study and perform in practice.*
 
 - [ ] **The "Cheat Sheet"**: [[Playbook]] (Emergency Field Guide).
+- [ ] **Spaced Repetition**: [[Spaced Repetition (Anki)]] (Core theoretical flashcards).
 - [ ] **Study Methods**: [[Rapid Encoding Toolkit]] (Feynman, Notepad, Anki).
 - [ ] **Language**: [[Vocabulary]] (Senior vs Junior terminology).
 - [ ] **Scenario Practice**: [[Simulation]] (Practice Q&A).
@@ -34,7 +35,7 @@
 - [ ] **Advanced ETL**: [[Advanced Power Query]] (M Language, Custom Functions).
 - [ ] **Database Logic**: [[SQL]] & [[Data Types]] ([[SQL]] vs [[DAX]]).
 
-## 5. DAX & The Semantic Engine
+## 5. [[DAX]] & The Semantic Engine
 *The mechanics of the calculation engine.*
 
 - [ ] **[[Context]] Theory**: [[Context]] & [[Filter Propagation]] (The Waterfall).

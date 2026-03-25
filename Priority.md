@@ -18,7 +18,7 @@
 
 *The hiring manager wants to know you understand [[Context]].*
 
-*   **Evaluation Context:**
+*   **Evaluation [[Context]]:**
     *   **Row Context:** The "Finger" (Line-by-line). Exists in Calculated Columns and Iterators (`SUMX`).
     *   **Filter Context:** The "Box" (Slicers/Visuals). Exists in Measures.
 *   **[[Context Transition]]:** How `CALCULATE` turns Row Context into Filter Context.
@@ -49,7 +49,7 @@
 *   **Layers:** Staging (Cleaning) -> Intermediate (Logic) -> Marts ([[Star Schema]]).
 *   **[[SQL]] Skills:** Basic Joins, `GROUP BY`.
 *   **🚀 Specialist Nuance:** **"[[Query Folding]]."**
-    *   *The Concept:* Even if you use dbt, you might use Power Query for prototyping. You must know that "[[Query Folding]]" pushes the work back to SQL. Breaking it (e.g., by adding an Index Column on a massive table) kills refresh times.
+    *   *The Concept:* Even if you use [[dbt]], you might use Power Query for prototyping. You must know that "[[Query Folding]]" pushes the work back to [[SQL]]. Breaking it (e.g., by adding an Index Column on a massive table) kills refresh times.
 
 ---
 
@@ -57,8 +57,8 @@
 
 When they ask about your workflow, memorize this sentence. It covers 80% of the core requirements:
 
-> "My philosophy is to push the heavy transformation logic upstream into **SQL/dbt** to build a clean **[[Kimball]] Star Schema**.
+> "My philosophy is to push the heavy transformation logic upstream into **SQL/dbt** to build a clean **[[Kimball]] [[Star Schema]]**.
 >
-> In **Power BI**, I focus on building a clean Semantic Model—using **1-to-Many single-direction [[Relationships|relationships]]**, hiding surrogate keys, and using **DAX Measures** (not calculated columns) for business logic.
+> In **Power BI**, I focus on building a clean Semantic Model—using **1-to-Many single-direction [[Relationships|relationships]]**, hiding surrogate keys, and using **[[DAX]] Measures** (not calculated columns) for business logic.
 >
 > Finally, for the **Dashboard**, I focus on performance and usability—avoiding clutter and using **Drill-throughs** to keep the interface clean."

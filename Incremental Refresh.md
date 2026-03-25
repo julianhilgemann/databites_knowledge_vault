@@ -30,7 +30,7 @@ If you have a Premium capacity, you can check the box for "Detect data changes".
 
 When you deploy a dataset with Incremental Refresh configured via the XMLA endpoint, you can open Tabular Editor and map to the workspace.
 You will see that Power BI has created a series of partitions on the Fact table (e.g., `2019`, `2020`, `2021`, `2024-Q1`, `2024-03-24`, etc.).
-Using TMSL via SQL Server Management Studio (SSMS), you can manually process a single historical partition if source data changes exceptionally.
+Using TMSL via [[SQL]] Server Management Studio (SSMS), you can manually process a single historical partition if source data changes exceptionally.
 
 ### Summary Checklist
 - [ ] Are `RangeStart` and `RangeEnd` defined exactly as `DateTime` [[Data Types|data types]]?

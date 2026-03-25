@@ -92,7 +92,7 @@
 | **Visual Calcs** | Doesn't use them. | Uses them for Matrix math to keep the model clean. |
 | **Drill Through** | Right-click default. | **Button** based (better UX) or **Cross-Report** (Enterprise). |
 | **Bookmarks** | Breaks filters (Left default settings). | Uses **"Selected Visuals" + Uncheck "Data"** to create safe toggles. |
-| **Tooltips** | Standard black box. | **Report Page Tooltips** providing context (Trend over time). |
+| **Tooltips** | Standard black box. | **Report Page Tooltips** providing [[Context|context]] (Trend over time). |
 | **Interactions** | Default (Highlighting). | **Filter** mode for clarity; **None** mode for fixed KPIs. |
 | **Hierarchy** | Uses Drill-down arrows. | Uses **"Stepped Layout"** in Matrix to show hierarchies clearly. |
 
