@@ -1,8 +1,8 @@
-# 📚 [Databites Knowledge Wiki](https://julianhilgemann.github.io/databites/)
+# 📚 [Databites Knowledge Wiki](https://julianhilgemann.github.io/databites_knowledge_vault/)
 
 <!-- Repository Badges -->
 <p align="center">
-  <a href="https://julianhilgemann.github.io/databites/">
+  <a href="https://julianhilgemann.github.io/databites_knowledge_vault/">
     <img src="https://img.shields.io/badge/Live_Site-Visit_Wiki-blue?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live Site" />
   </a>
   <img src="https://img.shields.io/badge/Powered%20by-Quartz-4B32C3?style=flat-square&logo=base-ui" alt="Quartz 4" />
